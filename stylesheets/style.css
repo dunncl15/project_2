@@ -1,5 +1,4 @@
 
-
 * {
   box-sizing: border-box;
 }
@@ -31,6 +30,10 @@ h3 {
   text-transform: uppercase;
 }
 
+#portfolio {
+  padding-bottom: 1em;
+}
+
 ul {
   padding: 0;
   list-style-type: none;
@@ -46,6 +49,15 @@ h4 {
   margin-bottom: 1em;
 }
 
+span {
+  font-weight: bold;
+}
+
+#contact p {
+  max-width: 462px;
+  margin: .5em auto;
+  padding: .5em;
+}
 
 /***** Link Styles ***********
 ******************************/
@@ -53,7 +65,7 @@ h4 {
 a {
   text-decoration: none;
   color: #404040;
-  padding: 10px;
+  padding: 5px;
 }
 
 a:visited {
@@ -104,9 +116,12 @@ img {
   margin: 0 auto;
   padding-left: 2em;
   padding-right: 2em;
-  padding-bottom: 1em;
   text-align: center;
   max-width: 1100px;
+}
+
+.profile-container {
+  padding-bottom: 2em;
 }
 
 nav {
@@ -146,12 +161,12 @@ nav li {
   max-width: 1100px;
 }
 
-.contact {
-  margin-bottom: 2em;
+#contact {
+  margin-bottom: 1.5em;
 }
 
-.contact h3 {
-  padding: 1.5em 0;
+#contact h3 {
+  padding: 1.5em 0 2em 0;
   margin: 0;
 }
 
@@ -191,15 +206,10 @@ nav li {
 /***** Media Queries ***********
 ******************************/
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
 
   * {
     box-sizing: border-box;
-  }
-
-  .content-container div {
-    min-height: 440px;
-    margin: 0 auto;
   }
 
   /***** Header ****************
@@ -208,6 +218,10 @@ nav li {
   .main-header li {
     display: inline-block;
     background-color: inherit;
+  }
+
+  h1 {
+    padding-bottom: 0;
   }
 
   .profile-image {
@@ -223,9 +237,21 @@ nav li {
     text-align: left;
   }
 
+  #portfolio {
+    margin-top: 0;
+    padding-bottom: 1.5em;
+  }
+
   nav li a {
     padding: 1em;
     margin-left: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #404040;
+    padding: 10px;
+    margin-right: 10px;
   }
 
   /***** Two Column Layout ***********
@@ -246,14 +272,13 @@ nav li {
     clear: right;
   }
 
-  .clearfix::after {
-    content: " ";
-    display: table;
-    clear: both;
-  }
-
   /***** Footer ***********
   ******************************/
+
+  #contact p {
+    max-width: 500px;
+    margin: .5em auto;
+  }
 
   .footer-anchor {
     display: none;
@@ -270,7 +295,7 @@ nav li {
 
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 
   * {
     box-sizing: border-box;
@@ -299,10 +324,6 @@ nav li {
 
   .main-nav li {
     float: left;
-  }
-
-  .profile-container {
-    margin-bottom: 2em;
   }
 
 /***** Three Column Layout ***********
